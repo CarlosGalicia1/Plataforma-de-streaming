@@ -1,7 +1,7 @@
 #ifndef VIDEOJUEGO_H
-#define VIDEJUEGO_H
+#define VIDEOJUEGO_H
 
-class Videojuego: public Video{
+class Videojuego: public Contenido{
     private:
         int monedas, nivel, salud;
         bool powerup;
@@ -25,7 +25,7 @@ class Videojuego: public Video{
         string reproducir() override;    
 };
 
-Videojuego::Videojuego():Video(){
+Videojuego::Videojuego():Contenido(){
     monedas = 0;
     nivel = 0;
     salud = 0;
