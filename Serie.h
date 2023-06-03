@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-class Serie: public Video{
+class Serie: public Contenido{
     private:
         vector<Episode> vect;
     public:
