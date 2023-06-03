@@ -1,10 +1,6 @@
 #ifndef VIDEO_H
 #define VIDEO_H
 
-#include <iostream>
-#include <string>
-using namespace std;
-
 class Video {
     protected:
         int ID, length;
@@ -13,9 +9,6 @@ class Video {
         bool restricted;
 
     public:
-        //Constructor:
-        Video();
-        Video(int id, int largo, float rate, string nombre, string genero);
         // ==============getters====================
         int getID();
         string getName();
@@ -30,23 +23,9 @@ class Video {
         void setGenre(string genero);
         void setRating(float rate);
         void setRestricted(bool restringido);
+        //===============metodos=======================
+        virtual string reproducir()=0;
 };
-
-Video::Video(){
-    ID = 0;
-    length = 0;
-    rating = 0;
-    name = "";
-    genre = "";
-}
-
-Video:: Video(int id, int largo, float rate, string nombre, string genero){
-    ID = id;
-    length = largo;
-    rating = rate;
-    name = nombre;
-    genre = genero;
-}
 
 int Video::getID(){
     return ID;
