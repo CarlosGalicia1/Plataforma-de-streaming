@@ -1,38 +1,45 @@
 #ifndef VIDEOJUEGO_H
 #define VIDEJUEGO_H
 
-#include <iostream>
-#include <vector>
-#include "Video.h"
-
-using namespace std;
-
 class Videojuego: public Video{
     private:
         int monedas, nivel, salud;
         bool powerup;
 
     public:
+        //Constructor:
         Videojuego();
-        Videojuego(int _monedas, int _nivel, bool _powerup, int _salud);
+        Videojuego(int id, int largo, float rate, string nombre, string genero,bool restringido, int _monedas, int _nivel,\
+            bool _powerup, int _salud);
+        // ==============getters====================
         int getMonedas();
         int getNivel();
         bool getPowerup();
         int getSalud();
+        // ==============setters====================
         void setMonedas(int _monedas);
         void setNivel(int _nivel);
         void setPowerup(bool _powerup);
         void setSalud(int _salud);
+        //===============metodos=======================
+        string reproducir() override;    
 };
 
-Videojuego::Videojuego(){
+Videojuego::Videojuego():Video(){
     monedas = 0;
     nivel = 0;
     salud = 0;
     powerup = false;
 }
 
-Videojuego::Videojuego(int _monedas, int _nivel, bool _powerup, int _salud){
+Videojuego::Videojuego(int id, int largo, float rate, string nombre, string genero,bool restringido, int _monedas, int _nivel,\
+    bool _powerup, int _salud){
+    ID = id;
+    length = largo;
+    rating = rate;
+    name = nombre;
+    genre = genero;
+    restricted = restringido;
     monedas = _monedas;
     nivel = _nivel;
     powerup = _powerup;
@@ -69,6 +76,10 @@ void Videojuego::setPowerup(bool _powerup){
 
 void Videojuego::setSalud(int _salud){
     salud = _salud;
+}
+
+string Videojuego::reproducir(){
+    return "Reproduciendo videojuego " + this->getName() + "\n";
 }
 
 #endif
