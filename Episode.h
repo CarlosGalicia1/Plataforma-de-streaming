@@ -1,9 +1,6 @@
 #ifndef EPISODE_H
 #define EPISODE_H
 
-#include "Video.h"
-#include <iostream>
-
 class Episode: public Video{
     private:
         int season;
@@ -11,17 +8,25 @@ class Episode: public Video{
     public:
         //Constructor:
         Episode();
-        Episode(int id, int largo, float rate, string nombre, string genero, int temporada);
+        Episode(int id, int largo, float rate, string nombre, string genero,bool restringido, int temporada);
         // ==============getters====================
         int getSeason();
         // ==============setters====================
-        void setSeason(int temporada);    
+        void setSeason(int temporada);
+        //===============metodos=======================
+        string reproducir() override;    
 };
 
 Episode::Episode():Video(){
     season = 0;
 }
-Episode::Episode(int id, int largo, float rate, string nombre, string genero, int temporada):Video(id,largo,rate,nombre,genero){
+Episode::Episode(int id, int largo, float rate, string nombre, string genero, bool restringido, int temporada){
+    ID = id;
+    length = largo;
+    rating = rate;
+    name = nombre;
+    genre = genero;
+    restricted = restringido;
     season = temporada;
 }
 
@@ -33,4 +38,7 @@ void Episode::setSeason(int temporada){
     season = temporada;
 }
 
+string Episode::reproducir(){
+    return "Reproduciendo episodio " + this->getName() + "\n";
+}
 #endif
