@@ -1,7 +1,7 @@
 #ifndef MOVIE_H
 #define MOVIE_H
 
-class Movie: public Video{
+class Movie: public Contenido{
     public:
     //Constructor:
     Movie();
@@ -10,7 +10,7 @@ class Movie: public Video{
     string reproducir() override;
 };
 
-Movie::Movie():Video(){
+Movie::Movie():Contenido(){
 }
 
 Movie::Movie(int id, int largo, float rate, string nombre, string genero, bool restringido){
