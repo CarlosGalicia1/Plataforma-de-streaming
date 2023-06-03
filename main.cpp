@@ -7,15 +7,15 @@ using namespace std;
 #include "Episode.h"
 #include "Serie.h"
 #include "Usuario.h"
-#include "Videjuego.h"
+#include "Videojuego.h"
 #include "Movie.h"
 
 int main(){
     //==========Usuario==========
     Usuario user("Charly", 18);
     user.setEdad(99);
-    user.setNombre("Juan");
-    cout << user.getNombre()<< endl;
+    user.setName("Juan");
+    cout << user.getName()<< endl;
     cout << user.getEdad() << endl;
 
     //==========Videojuego=======
