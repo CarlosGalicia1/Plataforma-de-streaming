@@ -9,9 +9,9 @@ class Usuario{
     public:
         Usuario();
         Usuario(string _nombre, int _edad);
-        string getNombre();
+        string getName();
         int getEdad();
-        void setNombre(string _nombre);
+        void setName(string _nombre);
         void setEdad(int _edad);
 };
 
@@ -25,7 +25,7 @@ Usuario::Usuario(string _nombre, int _edad){
     edad = _edad;
 }
 
-string Usuario::getNombre(){
+string Usuario::getName(){
     return nombre;
 }
 
@@ -33,7 +33,7 @@ int Usuario::getEdad(){
     return edad;
 }
 
-void Usuario::setNombre(string _nombre){
+void Usuario::setName(string _nombre){
     nombre = _nombre;
 }
 
