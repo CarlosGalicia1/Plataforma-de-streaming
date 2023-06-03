@@ -1,7 +1,7 @@
 #ifndef EPISODE_H
 #define EPISODE_H
 
-class Episode: public Video{
+class Episode: public Contenido{
     private:
         int season;
 
@@ -17,7 +17,7 @@ class Episode: public Video{
         string reproducir() override;    
 };
 
-Episode::Episode():Video(){
+Episode::Episode():Contenido(){
     season = 0;
 }
 Episode::Episode(int id, int largo, float rate, string nombre, string genero, bool restringido, int temporada){
