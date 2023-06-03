@@ -81,6 +81,7 @@ int main(){
     vector<Episode> episodes = s.getEpisodes();
     cout << episodes[0].getName() << endl;
     cout << s.reproducir() << endl;
+    cout << s.reproducir(1) << endl;
 
     //=========Movie=============
     Movie p(39, 150, 4.9,"Inception", "Drama", true);
