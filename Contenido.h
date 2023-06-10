@@ -51,7 +51,7 @@
         return restricted;
     }
 
-    void Contenido::setID(int id){
+    void Contenido::setID(int id){      
         ID = id;
     }
 
