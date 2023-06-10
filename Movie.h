@@ -4,14 +4,11 @@
 class Movie: public Contenido{
     public:
     //Constructor:
-    Movie();
     Movie(int id, int largo, float rate, string nombre, string genero, bool restringido);
     //===============metodos=======================
     string reproducir() override;
 };
 
-Movie::Movie():Contenido(){
-}
 
 Movie::Movie(int id, int largo, float rate, string nombre, string genero, bool restringido){
     ID = id;
@@ -23,6 +20,11 @@ Movie::Movie(int id, int largo, float rate, string nombre, string genero, bool r
 }
 
 string Movie::reproducir(){
+    /*(Implemento herencia de manera correcta y util,Implemento polimorfismo y clases abstractas de manera correcta y util,
+    Impemento sobrecarga y sobreescritura de métodos de manera correcta y util)
+    recibe: ningun valor
+    devuelve: valor de tipo string con el nombre del objeto actual
+    */
     return "Reproduciendo pelicula " + this->getName() + "\n";
 }
 
